@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# make sure to install cmake the build tool
+sudo apt install cmake

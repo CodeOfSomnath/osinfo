@@ -1,0 +1,40 @@
+#pragma once
+
+#include <string>
+
+std::string read_all_bytes(FILE* file);
+
+namespace osinfo {
+
+    class osinfo
+    {
+    private:
+        std::string os_name;
+        std::string os_version;
+        std::string shell_name;
+        std::string desktop_env_name;
+        std::string os_arch;
+        std::string package_count;
+        std::string cpu_info;
+        std::string gpu_info;
+    public:
+        osinfo();
+        ~osinfo();
+    };
+    
+    
+
+
+    // determine which distro family it belongs 
+    std::string get_distro_family();
+
+    // This function will get all the package count 
+    // from system. This will be count from all package managers
+    std::string get_package_count();
+
+
+    // This function will get os name 
+    std::string get_os_name();
+
+}
+
